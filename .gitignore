@@ -1,0 +1,28 @@
+# Ignore wp-config.php and .htaccess
+# wp-config.php
+.htaccess
+local-config.php
+staging-config.php
+live-config.php
+
+# don't ignore the wp-content dir, but ignore everything inside
+!/wp-content/
+/wp-content/*
+
+# Don’t ignore plugins dir, but ignore everything inside
+!/wp-content/plugins
+/wp-content/plugins/*
+
+# Don’t ignore akismet plugin
+!/wp-content/plugins/akismet
+
+# Composer folder
+composer.lock
+vendor/*
+
+# Don’t ignore themes dir, but ignore everything inside
+!/wp-content/themes
+/wp-content/themes/*
+
+# Don’t ignore batik theme
+!/wp-content/themes/batik

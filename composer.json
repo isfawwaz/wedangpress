@@ -1,0 +1,30 @@
+{
+    "name": "paperplane/dev-wordpress",
+	"description": "Using Composer to manage complete WordPress Project",
+	"license": "MIT",
+    "version": "0.0.1",
+    "repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+    ],
+    "require": {
+		"isfawwaz/lorasin": "0.0.13",
+		"wpackagist-plugin/broken-link-checker": "1.11.12",
+		"wpackagist-plugin/contact-form-7": "5.1.7",
+		"wpackagist-plugin/elementor": "2.9.7",
+		"wpackagist-plugin/google-analytics-dashboard-for-wp": "6.0.2",
+		"wpackagist-plugin/w3-total-cache": "0.13.1",
+		"wpackagist-plugin/wordpress-seo": "13.4.1",
+		"wpackagist-plugin/wp-smushit": "3.6.1",
+		"wpackagist-plugin/maintenance": "3.85",
+		"wpackagist-plugin/limit-login-attempts": "2.0beta3"
+	},
+	"extra": {
+	    "installer-paths": {
+	        "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+	        "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+	    }
+	}
+}
