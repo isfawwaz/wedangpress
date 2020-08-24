@@ -17,9 +17,9 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
-
-			<div class="gragas-jumbotron">
-				<div class="jumbotron-wrapper">
+			
+			<div class="jumbotron">
+				<div class="container mx-auto">
 					<h1 class="jumbotron-title"><?php echo strtoupper(single_post_title()); ?></h1>
 					<div class="breadcrumb-container">
 						<?php breadcrumbs(); ?>

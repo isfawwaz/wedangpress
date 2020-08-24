@@ -1,0 +1,43 @@
+.jumbotron {
+    @apply bg-screen text-center py-16 mb-25;
+
+    .jumbotron-title {
+        @apply text-5xl text-primary-text font-bold uppercase;
+    }
+
+    ol, ul {
+        @apply list-none m-0 flex justify-center items-center;
+
+        li {
+            @apply text-secondary-text mx-2;
+
+            &:first-child {
+                @apply ml-0;
+            }
+
+            &:last-child {
+                @apply mr-0;
+            }
+
+            &::after {
+                content: "/";
+                @apply ml-3;
+            }
+
+            &.active {
+                @apply text-primary-text;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            a {
+                &:hover {
+                    @apply text-primary-text;
+                }
+            }
+
+        }
+    }
+}
