@@ -57,12 +57,6 @@ if ( ! function_exists( 'get_setting_company_phone' ) ) :
     }
 endif;
 
-if ( ! function_exists( 'get_setting_company_phone_hotel' ) ) :
-    function get_setting_company_phone_hotel( $print = false ) {
-        return get_setting_func( 'company_phone_hotel', $print );
-    }
-endif;
-
 /**
  * Get option for company fax
  * 
@@ -84,12 +78,6 @@ endif;
 if ( ! function_exists( 'get_setting_company_email' ) ) :
     function get_setting_company_email( $print = false ) {
         return get_setting_func( 'company_email', $print );
-    }
-endif;
-
-if ( ! function_exists( 'get_setting_company_email_hotel' ) ) :
-    function get_setting_company_email_hotel( $print = false ) {
-        return get_setting_func( 'company_email_hotel', $print );
     }
 endif;
 

@@ -1,6 +1,32 @@
 .widget {
 	@apply m-0 mb-6;
 
+	&:last-child {
+		@apply mb-0;
+	}
+
+	.widget-title {
+		@apply text-xl text-primary-text font-bold mb-5;
+	}
+
+	a {
+		&:hover {
+			@apply text-secondary-text;
+		}
+	}
+
+	ul {
+		@apply list-none m-0;
+
+		li {
+			@apply mb-3;
+
+			&:last-child {
+				@apply mb-0;
+			}
+		}
+	}
+
 	/* Make sure select elements fit in widgets. */
 	select {
 		@apply max-w-full;

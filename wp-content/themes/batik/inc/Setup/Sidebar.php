@@ -17,6 +17,11 @@ class Sidebar {
 		// Load config
 		$this->config = config( get_stylesheet_directory() . '/config/sidebar.php' );
 
+		// Filter html
+		add_filter( 'lorasin_widget_before_widget', function() {
+			return '<section id="%1$s" class="widget %2$s">';
+		});
+
 		/**
 		 * Add hook
 		 */
