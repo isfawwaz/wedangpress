@@ -1,10 +1,10 @@
 .main-navigation {
 	li {
 		a {
-			@apply block text-white font-heading font-bold mx-4 text-base uppercase;
+			@apply block text-secondary-text font-heading font-bold mx-3 text-sm uppercase;
 
 			&:hover {
-				@apply text-accent;
+				@apply text-primary-text;
 			}
 		}
 	}
@@ -13,7 +13,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		@apply text-accent;
+		@apply text-primary-text
 	}
 }
 
@@ -34,7 +34,7 @@
 }
 
 .menu-text {
-	@apply text-base text-white uppercase font-semibold pointer-events-none mr-1;
+	@apply text-base text-primary-text uppercase font-semibold pointer-events-none mr-1;
 }
 
 .menu-closer {
@@ -57,10 +57,10 @@
 	}
 
 	span {
+		@apply bg-white;
 		position: static;
 		width: 100%;
 		height: 2px;
-		background: white;
 		transition: transform 1s 0s cubic-bezier(0.72, 0.01, 0.28, 0.98);
 
 		&:nth-child(1) {
@@ -75,40 +75,18 @@
 
 	&:hover {
 		span {
-			background: $primary;
+			@apply bg-white;
 		}
 	}
 }
 
 .menu-burger {
-	// @apply relative inline-block cursor-pointer;
-	// min-height: 27px;
-	// width: 35px;
-
-	// span {
-	// 	@apply absolute bg-primary;
-	// 	left: 5px;
-	// 	width: 25px;
-	// 	height: 2px;
-
-	// 	&:nth-child(1) {
-	// 		top: 8px;
-	// 		transition: transform 0.33s 0s cubic-bezier(0.72, 0.01, 0.28, 0.98);
-	// 	}
-
-	// 	&:nth-child(2) {
-	// 		top: 16px;
-	// 		width: 20px;
-	// 		transition: transform 0.33s 0s cubic-bezier(0.72, 0.01, 0.28, 0.98);
-	// 	}
-	// }
-
 	@apply flex flex-col items-end justify-between overflow-hidden;
 	width: 35px;
 	height: 26px;
 
 	span {
-		@apply bg-primary;
+		@apply bg-primary-text;
 		height: 2px;
 		transition: transform 0.33s 0s cubic-bezier(0.72, 0.01, 0.28, 0.98), width 0.33s 0s ease-in-out;
 
@@ -136,7 +114,7 @@
 
 	.main-navigation-container {
 		@apply fixed top-0 left-0 w-full h-full;
-		@apply flex flex-col items-start justify-between bg-onyx pt-16 pb-8 px-8;
+		@apply flex flex-col items-start justify-between bg-primary-text pt-16 pb-8 px-8;
 		@apply transition-all duration-1000 ease-in-out;
 		@apply invisible transform scale-y-0 origin-top;
 		z-index: $index__navigation-mobile;
@@ -277,17 +255,17 @@
 .sticky {
 
 	.header {
-		@apply bg-onyx;
+		@apply bg-white;
 	}
 	
 	.logo {
-		height: 50px;
+		// height: 50px;
 	}
 
 	.main-navigation {
 		li {
 			a {
-				@apply text-sm mx-2;
+				// @apply text-sm mx-2;
 			}
 		}
 	}

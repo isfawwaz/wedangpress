@@ -10,10 +10,10 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['Hind', 'Arial', 'sans-serif'],
+      sans: ['Poppins', 'Arial', 'sans-serif'],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
-      heading: ['Teko', 'sans-serif']
+      heading: ['Poppins', 'sans-serif']
     },
     extend: {
       colors: {
@@ -26,7 +26,10 @@ module.exports = {
         'onyx': '#0b051c',
         'oxford': '#171a3b',
         'primary': '#d10459',
-        'accent': '#43dde2'
+        'accent': '#43dde2',
+        'primary-text': '#434343',
+        'secondary-text': '#888888',
+        'tertiary-text': '#BABABA'
       },
       cursor: {
         help: 'help'

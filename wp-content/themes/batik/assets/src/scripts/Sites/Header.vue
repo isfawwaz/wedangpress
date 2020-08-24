@@ -42,13 +42,16 @@
 </template>
 
 <script>
+import isEmpty from 'lodash/isEmpty';
+
 export default {
     data() {
         return {
             menuOpened: false,
             isOpening: false,
             isClosing: false,
-            forceTransition: false
+            forceTransition: false,
+            lastScrollTop: 0
         };
     },
 
@@ -92,6 +95,31 @@ export default {
             }, 300);
         },
 
+        addCloneHeader() {
+            let findClone = document.getElementsByClassName('header-clone');
+
+            if( isEmpty(findClone) ) {
+                let header = document.getElementById('header');
+                let width = header.offsetWidth;
+                let height = header.clientHeight;
+
+                let clone = document.createElement('DIV');
+                clone.classList.add('header-clone');
+                clone.style.width = width + "px";
+                clone.style.height = height + "px";
+                
+                // document.body.insertBefore( clone, header.childNodes[0] );
+                header.before( clone );
+            }
+        },
+
+        removeCloneHeader() {
+            let el = document.getElementsByClassName('header-clone');
+            if( !isEmpty(el) ) {
+                el[0].remove();
+            }
+        },
+
         sticky() {
             let maxHeaderY = 50;
             let classHeaderSticky = 'sticky';
@@ -102,11 +130,36 @@ export default {
 
             let body = document.body;
 
-            if ( scroll >= maxHeaderY ) {
-                body.classList.add( classHeaderSticky );
-            } else {
+            if( scroll <= 10 ) {
                 body.classList.remove( classHeaderSticky );
+                body.classList.remove( 'sticky-up' );
+                this.removeCloneHeader();
+            } else {
+                body.classList.add( classHeaderSticky );
+                
+                if( scroll > this.lastScrollTop ) {
+                    body.classList.remove( 'sticky-up' );
+                    this.removeCloneHeader();
+                } else {
+                    this.addCloneHeader();
+                    body.classList.add( 'sticky-up' );
+                }
             }
+
+            this.lastScrollTop = scroll <= 0 ? 0 : scroll;
+
+            // if( scroll <= 50 ) {
+            //     body.classList.remove( classHeaderSticky );
+            //     this.removeCloneHeader();
+            // } else {
+            //     if ( scroll >= maxHeaderY ) {
+            //         body.classList.remove( classHeaderSticky );
+            //         this.removeCloneHeader();
+            //     } else {
+            //         this.addCloneHeader();
+            //         body.classList.add( classHeaderSticky );
+            //     }
+            // }
         }
     },
 
