@@ -1,0 +1,25 @@
+body {
+	@apply bg-oxford text-gray-100; /* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	@apply bg-hr;
+	@apply border-0;
+	@apply h-1x;
+	@apply mb-6;
+}
+
+@import "lists";
+
+img {
+	@apply h-auto; /* Make sure images are scaled correctly. */
+	@apply max-w-full; /* Adhere to container width. */
+}
+
+figure {
+	/* Extra wide images within figure tags don't overflow the content area. */
+	@apply my-4;
+	@apply mx-0;
+}
+
+@import "tables";

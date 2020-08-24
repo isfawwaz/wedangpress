@@ -1,0 +1,100 @@
+.site-footer {
+
+    .footer-top {
+        @apply bg-oxford text-white;
+
+        .site-info-section {
+            @apply flex justify-center items-center;
+        }
+
+        .site-social-section {
+            @apply flex justify-center items-center mt-24 pb-24;
+        }
+
+    }
+
+    .copyright {
+        @apply bg-onyx py-8;
+        @apply text-xs font-bold text-white text-center;
+
+        p {
+            color: #7c7b82;
+
+            span, a {
+                @apply text-white;
+            }
+
+            a:hover {
+                @apply text-primary;
+            }
+        }
+    }
+
+}
+
+.site-info-section {
+
+    h6 {
+        @apply uppercase text-primary;
+    }
+
+    span {
+        @apply font-bold tracking-widest block;
+    }
+
+    .site-info__content {
+        @apply mx-3;
+        width: 35%;
+    }
+
+    .info-phone {
+        @apply text-right;
+    }
+
+    .info-logo {
+        width: 30%;
+        height: 150px;
+        @apply flex flex-shrink-0 justify-center items-center;
+    }
+}
+
+.sosmed-item {
+    @apply flex justify-center items-center mx-4 text-white bg-onyx;
+    width: 50px;
+    height: 50px;
+
+    &::before {
+        @apply hidden;
+    }
+
+    &:hover {
+        @apply bg-primary;
+    }
+}
+
+@media (max-width: theme('screens.sm')) {
+    
+    .site-info-section {
+        @apply flex-col;
+
+        .site-info__content {
+            @apply w-full text-center mt-5;
+
+            &:first-child {
+                @apply mt-0;
+            }
+        }
+
+        .info-logo {
+            order: 1;
+        }
+
+        .info-phone {
+            order: 2;
+        }
+
+        .info-email {
+            order: 3;
+        }
+    }
+}

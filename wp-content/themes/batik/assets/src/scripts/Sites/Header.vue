@@ -1,0 +1,126 @@
+<template>
+    <header id="header" :class="{'opening': isOpening, 'closing': isClosing, 'force-transition': forceTransition}">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between">
+                <div class="w-full md:w-auto">
+                    <a :href="home" rel="no-follow" class="inline-block logo-link unanimation">
+						<slot name="logo" />
+					</a>
+                </div>
+                <div class="w-full text-right md:w-auto" :class="{ 'menu-opened': menuOpened }">
+                    <a 
+                        href="javascript:void(0);"
+                        class="inline-block hamburger menu-toggler text-right unanimation md:hidden"
+                        aria-expanded="false"
+                        @click.prevent="openMenu">
+						<div class="menu-burger">
+							<span></span>
+							<span></span>
+                            <span></span>
+						</div>
+					</a>
+                    <nav id="site-navigation" class="main-navigation-container text-right">
+                        <a 
+                            href="javascript:void(0);"
+                            class="menu-closer block md:hidden"
+                            @click.prevent="closeMenu">
+							<span></span>
+                            <span></span>
+						</a>
+                        <h3 class="block md:hidden">
+                            <span v-html="menuText"></span>
+                        </h3>
+                        <slot name="menu" />
+                        <p class="copyright block md:hidden">
+							© 2020 <span v-html="copyright"></span>.
+						</p>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            menuOpened: false,
+            isOpening: false,
+            isClosing: false,
+            forceTransition: false
+        };
+    },
+
+    props: {
+        home: String,
+        menuText: {
+            type: String,
+            default: 'Menu'
+        },
+        copyright: {
+            type: String,
+            default: 'Paper Plane Digital Lab'
+        }
+    },
+
+    methods: {
+        openMenu() {
+            this.isOpening = true;
+            this.menuOpened = true;
+        },
+
+        closeMenu() {
+            this.menuOpened = false;
+            setTimeout(() => {
+                this.isOpening = false;
+                this.isClosing = true;
+                setTimeout( () => this.isClosing = false, 500);
+            }, 2200);
+        },
+
+        onResize(event) {
+            if( window.innerWidth > 640 ) {
+                this.isClosing = false;
+                this.isOpening = false;
+                this.menuOpened = false;
+            }
+
+            this.forceTransition = true;
+            setTimeout(() => {
+                this.forceTransition = false;
+            }, 300);
+        },
+
+        sticky() {
+            let maxHeaderY = 50;
+            let classHeaderSticky = 'sticky';
+
+            let supportPageOffset = window.pageXOffset !== undefined;
+            let isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+            let scroll = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+
+            let body = document.body;
+
+            if ( scroll >= maxHeaderY ) {
+                body.classList.add( classHeaderSticky );
+            } else {
+                body.classList.remove( classHeaderSticky );
+            }
+        }
+    },
+
+    mounted() {
+        // Register an event listener when the Vue component is ready
+        this.sticky();
+        window.addEventListener('resize', this.onResize)
+        window.addEventListener('scroll', this.sticky)
+    },
+
+    beforeDestroy() {
+        // Unregister the event listener before destroying this Vue instance
+        window.removeEventListener('resize', this.onResize)
+        window.removeEventListener('scroll', this.sticky)
+    }
+}
+</script>

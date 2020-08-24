@@ -1,0 +1,16 @@
+.wp-caption {
+	@apply mb-6 max-w-full;
+
+	img[class*="wp-image-"] {
+		@apply block mx-auto;
+	}
+
+	.wp-caption-text {
+		// margin: 0.8075em 0;
+		@apply my-3 mx-0;
+	}
+}
+
+.wp-caption-text {
+	@apply text-center;
+}

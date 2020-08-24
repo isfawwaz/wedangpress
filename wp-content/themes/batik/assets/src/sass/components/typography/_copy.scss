@@ -1,0 +1,62 @@
+p {
+	@apply mb-6;
+
+	&:last-child {
+		@apply mb-0;
+	}
+}
+
+dfn, cite, em, i {
+	@apply italic;
+}
+
+blockquote {
+	@apply my-0;
+	@apply mx-6;
+
+	&:last-child {
+		@apply mb-0;
+	}
+}
+
+address {
+	@apply mx-0;
+	@apply mt-0;
+	@apply mb-6;
+
+	&:last-child {
+		@apply mb-0;
+	}
+}
+
+pre {
+	@apply bg-pre;
+	@apply font-mono;
+	@apply text-sm;
+	@apply leading-relaxed;
+	@apply mb-6;
+	@apply max-w-full;
+	@apply overflow-auto;
+	@apply p-6;
+}
+
+code, kbd, tt, var {
+	@apply font-code;
+	@apply text-sm;
+}
+
+abbr, acronym {
+	@apply border-b;
+	@apply border-abbr;
+	@apply border-dotted;
+	@apply cursor-help;
+}
+
+mark, ins {
+	@apply bg-ins;
+	@apply no-underline;
+}
+
+big {
+	@apply text-125p
+}

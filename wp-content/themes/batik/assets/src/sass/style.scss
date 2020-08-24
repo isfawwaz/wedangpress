@@ -1,0 +1,122 @@
+/*!
+Theme Name: Gragas
+Theme URI: http://underscores.me/
+Author: Paper Plane
+Author URI: https://paperplane.id
+Description: Starter child theme for Lorasin
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: gragas
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Gragas is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "components/variables-site/variables-site";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~animate.css";
+
+/*--------------------------------------------------------------
+# Typography
+	## Headings
+	## Copy
+--------------------------------------------------------------*/
+@import "components/typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+	## html, body, *, hr, img, figure
+	## Lists
+	## Tables
+--------------------------------------------------------------*/
+@import "components/elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+	## Button
+	## Fields
+--------------------------------------------------------------*/
+@import "components/forms/forms";
+
+/*--------------------------------------------------------------
+# Navigation
+	## Links
+	## Menu
+--------------------------------------------------------------*/
+@import "components/navigation/navigation";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+@import "components/modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "components/modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "components/modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "components/site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+	## Header
+	## Footer
+	## Posts and pages
+	## Comments
+--------------------------------------------------------------*/
+@import "components/site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "components/modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+	## embed, iframe, object, emoticon
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+@import "components/media/media";

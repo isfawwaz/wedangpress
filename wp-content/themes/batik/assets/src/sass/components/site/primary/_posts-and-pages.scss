@@ -1,0 +1,22 @@
+.sticky {
+	@apply block;
+}
+
+.post,
+.page {
+	@apply m-0;
+}
+
+.updated:not(.published) {
+	@apply hidden;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	@apply m-0 mt-6;
+}
+
+.page-links {
+	@apply clear-both m-0 mb-6;
+}

@@ -1,0 +1,25 @@
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	position: absolute !important;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+	@apply border-0 h-1x -m-1x p-0 w-1x overflow-hidden;
+
+	&:focus {
+		@apply bg-screen rounded-sm bg-text-screen block h-auto w-auto;
+		@apply font-bold text-sm leading-normal no-underline;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+		clip: auto !important;
+		clip-path: none;
+		left: 5px;
+		padding: 15px 23px 14px;
+		top: 5px;
+		z-index: 100000; /* Above WP toolbar. */
+	}
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	@apply outline-none;
+}

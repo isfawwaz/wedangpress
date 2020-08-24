@@ -1,0 +1,38 @@
+{
+	"name": "isfawwaz/batik",
+	"description": "WordPress Starter Child Theme for private projects based on Lorasin",
+	"keywords": ["WordPress", "Theme", "Starter"],
+	"homepage": "https://github.com/isfawwaz/wedangpress.git",
+	"license": "GPL-3.0",
+	"version": "0.0.1",
+	"authors": [
+		{
+			"name": "Ahmad Faris",
+			"email": "fairs@paperplane.id",
+			"homepage": "http://paperplane.id",
+			"role": "Digital Development Manager"
+		}
+	],
+	"require": {
+		"vlucas/phpdotenv": "^3.3",
+		"php-parallel-lint/php-parallel-lint": "^1.1",
+		"maksimer/wp-eloquent": "^1.0",
+		"dompdf/dompdf": "^0.8.5",
+		"raiym/instagram-php-scraper": "^0.9.9",
+		"phpfastcache/phpfastcache": "^7.1",
+		"google/apiclient": "^2.0"
+	},
+	"require-dev": {
+		"phpcompatibility/phpcompatibility-wp": "^2.0.0",
+		"wp-coding-standards/wpcs": "^2.0.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+	},
+	"autoload": {
+		"psr-4": { "Batik\\": "./inc" },
+		"files": [ 
+			"./inc/Helpers.php",
+			"./inc/ThemeHelpers.php"
+		]
+	},
+	"type": "wordpress-theme"
+}

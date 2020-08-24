@@ -1,0 +1,43 @@
+.gallery-field {
+    display: block;
+    width: 100%;
+}
+
+.gallery-list {
+    display: flex;
+
+    .gallery-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        max-width: 33%;
+        padding: 10px;
+
+        .gallery-item__content {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .gallery-list {
+
+        .gallery-item {
+            max-width: 100%;
+        }
+
+    }
+    
+}

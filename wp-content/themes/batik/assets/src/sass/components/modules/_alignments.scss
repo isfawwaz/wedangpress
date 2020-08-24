@@ -1,0 +1,11 @@
+.alignleft {
+	@apply inline float-left mr-6;
+}
+
+.alignright {
+	@apply inline float-right ml-6;
+}
+
+.aligncenter {
+	@apply clear-both block mx-auto;
+}
