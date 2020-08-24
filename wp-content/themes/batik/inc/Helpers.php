@@ -159,6 +159,51 @@ if ( ! function_exists( 'gragas_posted_by' ) ) :
 	}
 endif;
 
+if ( ! function_exists( 'gragas_entry_tags') ) :
+	function gragas_entry_tags() {
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'gragas' ) );
+		if ( $tags_list ) {
+			/* translators: 1: list of tags. */
+			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'gragas' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+		}
+	}
+endif;
+
+if ( ! function_exists( 'gragas_entry_categories' ) ) :
+	function gragas_entry_categories() {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( esc_html__( ', ', 'gragas' ) );
+		if ( $categories_list ) {
+			echo '<div class="categories">';
+			/* translators: 1: list of categories. */
+			printf( '<span class="cat-links">' . esc_html__( '%1$s', 'gragas' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			echo '</div>';
+		}
+	}
+endif;
+
+if ( ! function_exists( 'gragas_post_edit' ) ) :
+	function gragas_post_edit() {
+		edit_post_link(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Edit <span class="screen-reader-text">%s</span>', 'gragas' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			),
+			'<span class="edit-link">',
+			'</span>'
+		);
+	}
+endif;
+
 if ( ! function_exists( 'gragas_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -324,21 +369,23 @@ if ( ! function_exists( 'gragas_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<div class="post-thumbnail">
+			<div class="post-thumbnail cover-image">
 				<?php the_post_thumbnail(); ?>
 			</div><!-- .post-thumbnail -->
 
 		<?php else : ?>
 
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-			?>
-		</a>
+		<div class="article-item--image">
+			<a class="post-thumbnail block" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+				<?php
+				the_post_thumbnail( 'post-thumbnail', array(
+					'alt' => the_title_attribute( array(
+						'echo' => false,
+					) ),
+				) );
+				?>
+			</a>
+		</div>
 
 		<?php
 		endif; // End is_singular().

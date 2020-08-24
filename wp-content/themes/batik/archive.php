@@ -12,42 +12,56 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+			
+		<?php the_gragas_jumbotron( 0, true );?>
 
-		<?php if ( have_posts() ) : ?>
+			<div class="container mx-auto">
+				<div class="flex">
+					<div class="w-2/3 pr-4">
+						<?php
+						if ( have_posts() ) :
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+								echo "<div class='grid grid-cols-2 gap-5'>"; // Start Row
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+								/* Start the Loop */
+								while ( have_posts() ) :
+									the_post();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+									/*
+									* Include the Post-Type-specific template for the content.
+									* If you want to override this in a child theme, then include a file
+									* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+									*/
+									echo "<div class='article-grid'>";
+									get_template_part( 'template-parts/content', get_post_type() );
+									echo "</div>";
 
-			endwhile;
+								endwhile;
 
-			the_posts_navigation();
+								echo "</div>"; // End Row
 
-		else :
+								// Make the pagination in one row with full width
+								echo "<div class='row'>";
+									echo "<div class='col'>";
+										gragas_pagination();
+									echo "</div>";
+								echo "</div>";
 
-			get_template_part( 'template-parts/content', 'none' );
+						else :
 
-		endif;
-		?>
+							get_template_part( 'template-parts/content', 'none' );
+
+						endif;
+						?>
+					</div>
+					<div class="w-1/3 pl-4">
+						<?php get_sidebar();?>
+					</div>
+				</div>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
