@@ -22,7 +22,7 @@ return [
     | Can be change to client name.
     |
     */
-    'footer_text' => 'Wahaha Hotel & Entertainment.',
+    'footer_text' => 'Batik.',
 
     /*
     |--------------------------------------------------------------------------
