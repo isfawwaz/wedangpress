@@ -46,10 +46,8 @@ get_header();
 								echo "</div>"; // End Row
 
 								// Make the pagination in one row with full width
-								echo "<div class='row'>";
-									echo "<div class='col'>";
-										gragas_pagination();
-									echo "</div>";
+								echo "<div class='pagination'>";
+									gragas_pagination();
 								echo "</div>";
 
 						else :

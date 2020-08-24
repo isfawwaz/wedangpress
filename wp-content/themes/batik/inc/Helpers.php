@@ -173,7 +173,7 @@ endif;
 if ( ! function_exists( 'gragas_entry_categories' ) ) :
 	function gragas_entry_categories() {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'gragas' ) );
+		$categories_list = get_the_category_list( esc_html__( ' ', 'gragas' ) );
 		if ( $categories_list ) {
 			echo '<div class="categories">';
 			/* translators: 1: list of categories. */

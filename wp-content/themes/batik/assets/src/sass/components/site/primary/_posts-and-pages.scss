@@ -24,3 +24,99 @@
 .page-links {
 	@apply clear-both m-0 mb-6;
 }
+
+.article-item {
+	@apply flex flex-col;
+
+	.article-item--image {
+		@apply overflow-hidden;
+
+		img {
+			@apply transform scale-100;
+			@apply transition-all duration-300 ease-in-out;
+
+			&:hover {
+				@apply scale-105 opacity-75;
+				transition: all 2s ease-in-out, opacity 300ms ease-in-out;
+			}
+		}
+	}
+
+	.categories {
+		@apply my-3 overflow-hidden;
+		height: 22px;
+	}
+
+	.title {
+		@apply font-semibold text-lg leading-6 mx-auto my-3 break-words;
+
+		a {
+			@apply text-primary-text;
+
+			&:hover {
+				@apply text-primary;
+			}
+		}
+	}
+
+	.intro-content {
+		@apply text-sm text-secondary-text leading-6 break-words;
+	}
+
+	.edit-link {
+		@apply mt-2 italic;
+	}
+
+}
+
+@mixin tag {
+	@apply inline-block m-0 mt-1 mr-1 py-1 px-2 break-words;
+}
+
+.categories {
+	.cat-links {
+		@include tag;
+		@apply float-left font-semibold text-2xs bg-primary-text text-white;
+	}
+}
+
+.tags {
+	.tags-links {
+		@include tag;
+		@apply float-left font-semibold text-2xs bg-primary-text text-white;
+	}
+}
+
+.tagcloud {
+	.tag-cloud-link {
+		@include tag;
+	}
+}
+
+.pagination {
+	@apply mt-8;
+
+	ul {
+		@apply list-none m-0 flex justify-center items-center;
+
+		li {
+			@apply mx-2;
+
+			a, span {
+				@apply py-2 px-4 border;
+			}
+
+			span {
+				@apply border-primary-text bg-primary-text text-white;
+			}
+
+			a {
+				@apply border-screen text-secondary-text;
+
+				&:hover {
+					@apply border-primary-text bg-primary-text text-white;
+				}
+			}
+		}
+	}
+}

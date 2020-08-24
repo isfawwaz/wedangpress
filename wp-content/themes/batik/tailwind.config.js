@@ -38,6 +38,8 @@ module.exports = {
         'code': 'Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace'
       },
       fontSize: {
+        '3xs': '0.25rem',
+        '2xs': '0.5rem',
         '125p': '125%'
       },
       inset: {

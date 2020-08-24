@@ -31,4 +31,45 @@
 	select {
 		@apply max-w-full;
 	}
+
+	// Search form
+	.search-form {
+		@apply relative;
+
+		.search-submit {
+			@apply hidden;
+		}
+
+		.search-field {
+			@apply block w-full px-4 py-3 pr-10 border border-screen outline-none;
+			@apply bg-white text-sm text-primary-text;
+			@apply transition-all duration-500 ease-in-out;
+
+			&:focus {
+				@apply border-primary-text;
+			}
+		}
+
+		label {
+			@apply block relative w-full;
+
+			&::after {
+				content: "\f002";
+				display: inline-block;
+				font: normal normal normal 14px/1 FontAwesome;
+				font-size: inherit;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				@apply text-screen absolute top-0 transform translate-y-full;
+				right: 15px;
+			}
+		}
+	}
+}
+
+.widget-area {
+	.widget {
+		@apply mb-12;
+	}
 }
