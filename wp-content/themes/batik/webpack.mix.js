@@ -27,32 +27,6 @@ mix.webpackConfig({
         }
     },
     module: {
-        rules: [
-            // {
-            //     use: [
-            //         {
-            //             loader: 'postcss-loader',
-            //             options: {
-            //                 ident: 'postcss',
-            //                 plugins: [
-            //                     require('tailwindcss'),
-            //                     require('autoprefixer'),
-            //                 ],
-            //             },
-            //         }
-            //     ]
-            // },
-            // {
-            //     test: /\.vue$/,
-            //     loader: 'vue-loader',
-            //     exclude: /bower_components/,
-            //     options: {
-            //         cssModules: {
-            //             localIdentName: '[local]--[hash:base64:5]',
-            //             camelCase: true,
-            //         },
-            //     },
-            // },
-        ]
+        rules: []
     }
 });
