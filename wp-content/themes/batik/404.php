@@ -10,16 +10,16 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area mt-25">
 		<main id="main" class="site-main">
 
 			<section class="error-page-section error-404 not-found">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-12 col-lg-6 order-sm-last">
+				<div class="container mx-auto">
+					<div class="flex flex-col md:flex-row">
+						<div class="order-first w-full md:order-last md:w-1/2">
 							<img src="<?php echo get_stylesheet_directory_uri() . '/assets/dist/images/img-404.png';?>" alt="404" class="img-fluid">
 						</div>
-						<div class="col-12 col-lg-6">
+						<div class="w-full md:w-1/2">
 							<header class="page-header">
 								<h3 class="page-title">Ups! Halaman tidak dapat ditemukan.</h3>
 							</header><!-- .page-header -->
