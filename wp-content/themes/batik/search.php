@@ -32,8 +32,10 @@ get_header();
 									* If you want to override this in a child theme, then include a file
 									* called content-___.php (where ___ is the Post Type name) and that will be used instead.
 									*/
-									echo "<div class='col-xs-12 col-md-6'>";
-									get_template_part( 'template-parts/content', get_post_type() );
+									echo "<div class='article-grid'>";
+
+										get_template_part( 'template-parts/content', get_post_type() );
+										
 									echo "</div>";
 
 								endwhile;
@@ -41,10 +43,8 @@ get_header();
 								echo "</div>"; // End Row
 
 								// Make the pagination in one row with full width
-								echo "<div class='row'>";
-									echo "<div class='col'>";
-										gragas_pagination();
-									echo "</div>";
+								echo "<div class='pagination'>";
+									gragas_pagination();
 								echo "</div>";
 
 						else :
