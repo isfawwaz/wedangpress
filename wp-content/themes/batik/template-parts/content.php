@@ -13,37 +13,29 @@
 
 	<?php if( !is_single() ): ?>
 
-		<?php gragas_post_thumbnail(); ?>
-
-		<div class="article-item--content">
-			<?php gragas_entry_categories();?>
-			<?php the_title( '<h4 class="title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark" title="'. get_the_title() .'">', '</a></h2>' ); ?>
-			<div class="intro-content">
-				<?php echo get_the_excerpt();?>
-			</div><!-- .entry-content -->
-		</div>
-
-		<?php gragas_post_edit(); ?>
+		<?php get_template_part( 'template-parts/content', 'grid' ); ?>
 
 	<?php else: ?>
 
 		<?php gragas_post_thumbnail(); ?>
+
+		<?php gragas_entry_categories();?>
 	
 		<header class="entry-header">
 			<?php
 			if ( is_singular() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
+				the_title( '<h1 class="title">', '</h1>' );
 			else :
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				the_title( '<h2 class="title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 
 			if ( 'post' === get_post_type() ) :
 				?>
 				<div class="entry-meta">
-					<?php
-					gragas_posted_on();
-					gragas_posted_by();
-					?>
+					<?php gragas_posted_on();?>
+					<?php gragas_post_edit(); ?>
+					<hr>
+					<?php gragas_posted_by();?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
 		</header><!-- .entry-header -->
@@ -67,11 +59,18 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gragas' ),
 				'after'  => '</div>',
 			) );
+
+			gragas_entry_tags();
 			?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-footer">
-			<?php gragas_entry_footer(); ?>
+			<div class="entry-sharing">
+				<?php gragas_sharing_button();?>
+			</div>
+			<div class="entry-related">
+				<?php gragas_article_related();?>
+			</div>
 		</footer><!-- .entry-footer -->
 
 	<?php endif;?>

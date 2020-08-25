@@ -1,5 +1,5 @@
 p {
-	@apply mb-6;
+	@apply mb-6 leading-8 text-primary-text;
 
 	&:last-child {
 		@apply mb-0;

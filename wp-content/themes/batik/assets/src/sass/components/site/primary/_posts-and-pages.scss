@@ -67,6 +67,85 @@
 		@apply mt-2 italic;
 	}
 
+	// START SINGLE ARTICLE
+	.entry-header {
+
+		.title {
+			@apply text-5xl leading-normal;
+		}
+
+		.entry-meta {
+			@apply mt-4;
+
+			span {
+				@apply text-sm;
+			}
+		}
+
+		hr {
+			height: 10px;
+			width: 150px;
+			@apply block bg-primary-text my-5 mx-0;
+		}
+
+		blockquote {
+			@apply my-10 mx-auto pt-3 pr-0 pb-3 pl-10 border-screen text-lg;
+			border-left-style: solid;
+			border-left-width: 10px;
+		}
+
+	}
+
+	.tags-links {
+		@apply block my-5 text-secondary-text text-sm;
+
+		a {
+			@apply text-primary-text font-semibold;
+
+			&:hover {
+				@apply text-secondary-text;
+			}
+		}
+	}
+
+	.entry-sharing {
+		@apply block mt-5 mb-20;
+
+		.social-sharing {
+			@apply flex items-center;
+			
+			a {
+				@apply flex justify-center items-center mx-2 text-primary-text text-sm bg-screen;
+				width: 48px;
+				height: 48px;
+
+				&:hover {
+					@apply text-secondary-text;
+				}
+
+				&.twitter:hover {
+					color: #1da1f2;
+				}
+
+				&.facebook:hover {
+					color: #3b5998;
+				}
+
+				&:first-child {
+					@apply ml-0;
+				}
+
+				&:last-child {
+					@apply mr-0;
+				}
+			}
+		}
+	}
+
+	.title-related {
+		@apply mb-4;
+	}
+
 }
 
 @mixin tag {

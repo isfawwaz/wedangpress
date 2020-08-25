@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import lowerCase from 'lodash/lowerCase';
+import kebabCase from 'lodash/kebabCase';
 
 // Don't warn about using the dev version of Vue in development.
 Vue.config.productionTip = process.env.NODE_ENV === 'production'
@@ -17,7 +18,7 @@ Vue.config.productionTip = process.env.NODE_ENV === 'production'
 
 // Vue.component('example-component', require('./Sites/ExampleComponent.vue').default);
 const files = require.context('./Sites/', true, /\.vue$/i)
-files.keys().map( key => Vue.component("w" + lowerCase(key.split('/').pop().split('.')[0]), files(key).default))
+files.keys().map( key => Vue.component("w" + kebabCase(lowerCase(key.split('/').pop().split('.')[0])), files(key).default))
 
 const app = new Vue({
     el: document.getElementById("wahaha-site"),

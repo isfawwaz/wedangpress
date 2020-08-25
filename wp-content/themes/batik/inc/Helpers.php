@@ -150,11 +150,11 @@ if ( ! function_exists( 'gragas_posted_by' ) ) :
 	function gragas_posted_by() {
 		$byline = sprintf(
 			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'gragas' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+			esc_html_x( 'Written by %s', 'post author', 'gragas' ),
+			'<strong class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></strong>'
 		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<blockquote class="byline"> ' . $byline . '</blockquote>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -794,6 +794,48 @@ function breadcrumbs()
 /**
  * Gragas Post Related
  */
+function gragas_article_related() {
+	$tags = wp_get_post_tags(get_the_id());
+	if( $tags ) {
+		$tag_ids = [];
+		foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+
+		$args = [
+			'tag__in'			=> $tag_ids,
+			'post__not_in'		=> [get_the_id()],
+			'posts_per_page'	=> 4,
+			'caller_get_posts'	=> 1,
+			'post_type'			=> get_post_type(),
+		];
+
+		$related = new WP_Query($args);
+
+		if( $related->have_posts() ):
+			echo '<div class="related-post">';
+			
+				echo '<h3 class="title-related">' . __('Related Post', 'gragas') . '</h3>';
+				
+				echo '<div class="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-8">';
+
+					while( $related->have_posts() ):
+
+						$related->the_post();
+
+						echo '<article id="post-'.get_the_ID().'" '. get_post_class('article-item').'>';
+
+							get_template_part( 'template-parts/content', 'grid' );
+
+						echo '</article>';
+
+					endwhile;
+
+				echo '</div>';
+
+			echo '</div>';
+		endif;
+	}
+}
+
 function gragas_post_related() {
 	$tags = wp_get_post_tags(get_the_id());
 	if( $tags ) {
@@ -982,6 +1024,10 @@ function get_user_ip_addr(){
         $ip = $_SERVER['REMOTE_ADDR'];
     }
     return $ip;
+}
+
+function gragas_sharing_button() {
+	echo '<wsocial-sharing title="'. get_the_title() .'" link="'. get_the_permalink() .'" excerpt="'. get_the_excerpt() .'" />';
 }
 
 require_once 'Settings.php';
