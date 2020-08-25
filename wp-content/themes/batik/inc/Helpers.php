@@ -484,9 +484,17 @@ if (! function_exists('mixin')) {
  * Gragas Current Title
  */
 function gragas_current_title() {
-    $text = 'Unknown';
+	$text = 'Unknown';
 
-    if( is_home() ):
+	if( is_author() ) :
+		
+		// Get the author information
+		global $author;
+		$userdata = get_userdata($author);
+
+		$text = sprintf( __('Author: %1$s', 'origamicrane'), $userdata->display_name );
+
+    elseif( is_home() ):
 
         $text = __('Latest Blog Post', 'origamicrane');
 
@@ -508,7 +516,7 @@ function gragas_current_title() {
 
     elseif ( is_archive() && is_tax() && !is_category() && !is_tag() ):
 
-        $text = get_queried_object()->name;
+		$text = get_queried_object()->name;
 
     elseif ( is_single() ):
 
@@ -547,14 +555,6 @@ function gragas_current_title() {
     elseif ( is_year() ):
         
         $text = sprintf( __('Arsip: %1$s', 'origamicrane'), get_the_time('Y') );
-
-    elseif ( is_author() ):
-
-        // Get the author information
-        global $author;
-        $userdata = get_userdata($author);
-
-        $text = sprintf( __('Author: %1$s', 'origamicrane'), $userdata->display_name );
 
     elseif ( get_query_var('paged') ):
 
@@ -624,7 +624,18 @@ function breadcrumbs()
         // Home page
         echo '<li class="item-home"><a class="bread-link bread-home" href="' . get_home_url() . '" title="' . $home_title . '">' . $home_title . '</a></li>';
 
-        if (is_home()) {
+		if( is_author() ) {
+
+			// Auhor archive
+
+            // Get the author information
+            global $author;
+            $userdata = get_userdata($author);
+
+            // Display author name
+			echo '<li class="active item-current item-current-' . $userdata->user_nicename . '">' . 'Author: ' . $userdata->display_name . '</li>';
+			
+		} elseif (is_home()) {
             echo '<li class="active">Blog</li>';
         } elseif (is_archive() && !is_tax() && !is_category() && !is_tag()) {
             echo '<li class="active">' . post_type_archive_title($prefix, false) . '</li>';
@@ -763,16 +774,6 @@ function breadcrumbs()
 
             // Display year archive
             echo '<li class="active item-current-' . get_the_time('Y') . '">Arsip Tahun ' . get_the_time('Y') . '</li>';
-        } elseif (is_author()) {
-
-            // Auhor archive
-
-            // Get the author information
-            global $author;
-            $userdata = get_userdata($author);
-
-            // Display author name
-            echo '<li class="active item-current item-current-' . $userdata->user_nicename . '">' . 'Penulis: ' . $userdata->display_name . '</li>';
         } elseif (get_query_var('paged')) {
 
             // Paginated archives
