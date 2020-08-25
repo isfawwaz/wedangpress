@@ -39,6 +39,7 @@
 
 .menu-closer {
 	position: absolute;
+	top: 0px;
 	right: 40px;
 	margin-top: 15px;
 	cursor: pointer;
@@ -81,7 +82,7 @@
 }
 
 .menu-burger {
-	@apply flex flex-col items-end justify-between overflow-hidden;
+	@apply flex flex-col items-end justify-between overflow-hidden ml-auto;
 	width: 35px;
 	height: 26px;
 
@@ -114,7 +115,7 @@
 
 	.main-navigation-container {
 		@apply fixed top-0 left-0 w-full h-full;
-		@apply flex flex-col items-start justify-between bg-primary-text pt-16 pb-8 px-8;
+		@apply flex flex-col items-start justify-between bg-primary-text py-8 px-8;
 		@apply transition-all duration-1000 ease-in-out;
 		@apply invisible transform scale-y-0 origin-top;
 		z-index: $index__navigation-mobile;
@@ -163,12 +164,6 @@
 		}
 	}
 
-}
-
-.admin-bar {
-	.menu-closer {
-		top: 60px;
-	}
 }
 
 .opening {

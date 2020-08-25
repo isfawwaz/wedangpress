@@ -10,7 +10,7 @@
                 <div class="w-full text-right md:w-auto" :class="{ 'menu-opened': menuOpened }">
                     <a 
                         href="javascript:void(0);"
-                        class="inline-block hamburger menu-toggler text-right unanimation md:hidden"
+                        class="block hamburger menu-toggler text-right unanimation md:hidden"
                         aria-expanded="false"
                         @click.prevent="openMenu">
 						<div class="menu-burger">
@@ -69,11 +69,31 @@ export default {
 
     methods: {
         openMenu() {
+            let body = document.body;
+            body.classList.add( 'mobile-menu-opened' );
+
             this.isOpening = true;
             this.menuOpened = true;
+
+            let header = document.getElementById('site-navigation');
+            let adminBar = document.getElementById('wpadminbar');
+
+            let windowHeight = window.innerHeight;
+
+            if( adminBar !== undefined ) {
+                windowHeight = windowHeight - adminBar.clientHeight;
+            }
+
+            header.style.height = windowHeight + "px";
         },
 
         closeMenu() {
+            let body = document.body;
+            body.classList.remove( 'mobile-menu-opened' );
+
+            let header = document.getElementById('site-navigation');
+            header.removeAttribute('style');
+
             this.menuOpened = false;
             setTimeout(() => {
                 this.isOpening = false;
@@ -121,7 +141,7 @@ export default {
         },
 
         sticky() {
-            if( window.width >= 540 ) {
+            if( window.innerWidth >= 720 ) {
                 let maxHeaderY = 50;
                 let classHeaderSticky = 'sticky';
 
