@@ -11,7 +11,7 @@
     ],
     "require": {
 		"isfawwaz/lorasin": "0.0.13",
-		"wpackagist-plugin/broken-link-checker": "1.11.13",
+		"wpackagist-plugin/broken-link-checker": "1.11.14",
 		"wpackagist-plugin/contact-form-7": "5.2.1",
 		"wpackagist-plugin/elementor": "2.9.14",
 		"wpackagist-plugin/google-analytics-dashboard-for-wp": "6.2.2",
