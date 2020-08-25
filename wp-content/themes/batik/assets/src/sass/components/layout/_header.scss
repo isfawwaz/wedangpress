@@ -31,3 +31,11 @@
         }
     }
 }
+
+@media (max-width: theme('screens.sm')) {
+
+    .logo {
+        @apply h-auto;
+    }
+    
+}

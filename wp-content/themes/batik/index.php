@@ -22,11 +22,11 @@ get_header();
 
 			<div class="container mx-auto">
 				<div class="flex">
-					<div class="w-2/3 pr-4">
+					<div class="w-full md:w-2/3 pr-4">
 						<?php
 						if ( have_posts() ) :
 
-								echo "<div class='grid grid-cols-2 gap-5'>"; // Start Row
+								echo "<div class='grid grid-cols-1 gap-5 md:grid-cols-2'>"; // Start Row
 
 								/* Start the Loop */
 								while ( have_posts() ) :
@@ -57,7 +57,7 @@ get_header();
 						endif;
 						?>
 					</div>
-					<div class="w-1/3 pl-4">
+					<div class="w-full md:w-1/3 pl-4">
 						<?php get_sidebar();?>
 					</div>
 				</div>

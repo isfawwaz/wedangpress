@@ -25,7 +25,7 @@
 
 		<template v-slot:logo>
 			<?php
-				$logo_footer = get_theme_mod('lorasin_logo_footer');
+				$logo_footer = get_theme_mod('lorasin_logo_invert');
 			?>
 			<img src="<?php echo $logo_footer; ?>" alt="<?php get_bloginfo('name') ?>" class="logo img-fluid">
 		</template>

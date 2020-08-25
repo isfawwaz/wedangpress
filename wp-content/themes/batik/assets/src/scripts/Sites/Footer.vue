@@ -2,8 +2,8 @@
     <footer>
         <div class="footer-top">
             <div class="container mx-auto">
-                <div class="flex">
-                    <div class="w-1/4">
+                <div class="flex flex-col md:flex-row">
+                    <div class="w-full md:w-1/4">
                         <a :href="home" rel="no-follow" class="logo-link-footer unanimation">
                             <slot name="logo" />
                         </a>
@@ -11,13 +11,13 @@
                             <slot name="description" />
                         </div>
                     </div>
-                    <div class="w-1/4">
+                    <div class="w-full mt-8 md:w-1/4 md:mt-0">
                         <slot name="menu-one" />
                     </div>
-                    <div class="w-1/4">
+                    <div class="w-full mt-8 md:w-1/4 md:mt-0">
                         <slot name="menu-two" />
                     </div>
-                    <div class="w-1/4">
+                    <div class="w-full mt-8 md:w-1/4 md:mt-0">
                         <section id="contact-footer" class="widget widget_contact">
                             <slot name="contact" />
                             <div class="site-social-section" v-if="!isEmpty(facebook) || !isEmpty(twitter) || !isEmpty(instagram) || !isEmpty(youtube)">

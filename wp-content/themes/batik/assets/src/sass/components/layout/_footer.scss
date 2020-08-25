@@ -3,6 +3,14 @@
     .footer-top {
         @apply bg-screen text-primary-text py-24;
 
+        .logo-link-footer {
+            @apply block mb-4;
+
+            img {
+                @apply w-full h-auto;
+            }
+        }
+
         .footer-description {
             @apply text-sm;
         }
@@ -97,6 +105,18 @@
 }
 
 @media (max-width: theme('screens.sm')) {
+
+    .site-footer {
+
+        .footer-top {
+
+            .site-social-section {
+                @apply justify-center;
+            }
+
+        }
+
+    }
     
     .site-info-section {
         @apply flex-col;

@@ -25,3 +25,11 @@ figure {
 @import "tables";
 
 @import "jumbotron";
+
+@media (max-width: theme('screens.sm')) {
+
+	.container {
+		@apply mx-5 w-auto;
+	}
+
+}

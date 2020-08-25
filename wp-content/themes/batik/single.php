@@ -22,8 +22,8 @@ get_header();
 		?>
 
 		<div class="container mx-auto">
-			<div class="flex">
-				<div class="w-2/3 mr-4">
+			<div class="flex flex-col md:flex-row">
+				<div class="w-full md:w-2/3 md:mr-4">
 					<?php
 						while ( have_posts() ) :
 							the_post();
@@ -35,7 +35,7 @@ get_header();
 						endwhile; // End of the loop.
 					?>
 				</div>
-				<div class="w-1/3 ml-4">
+				<div class="w-full mt-16 md:w-1/3 md:m-0 md:ml-4">
 					<?php get_sidebar();?>
 				</div>
 			</div>

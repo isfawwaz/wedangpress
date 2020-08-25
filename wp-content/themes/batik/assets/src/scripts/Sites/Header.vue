@@ -121,32 +121,34 @@ export default {
         },
 
         sticky() {
-            let maxHeaderY = 50;
-            let classHeaderSticky = 'sticky';
+            if( window.width >= 540 ) {
+                let maxHeaderY = 50;
+                let classHeaderSticky = 'sticky';
 
-            let supportPageOffset = window.pageXOffset !== undefined;
-            let isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
-            let scroll = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
+                let supportPageOffset = window.pageXOffset !== undefined;
+                let isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
+                let scroll = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 
-            let body = document.body;
+                let body = document.body;
 
-            if( scroll <= 10 ) {
-                body.classList.remove( classHeaderSticky );
-                body.classList.remove( 'sticky-up' );
-                this.removeCloneHeader();
-            } else {
-                body.classList.add( classHeaderSticky );
-                
-                if( scroll > this.lastScrollTop ) {
+                if( scroll <= 10 ) {
+                    body.classList.remove( classHeaderSticky );
                     body.classList.remove( 'sticky-up' );
                     this.removeCloneHeader();
                 } else {
-                    this.addCloneHeader();
-                    body.classList.add( 'sticky-up' );
+                    body.classList.add( classHeaderSticky );
+                    
+                    if( scroll > this.lastScrollTop ) {
+                        body.classList.remove( 'sticky-up' );
+                        this.removeCloneHeader();
+                    } else {
+                        this.addCloneHeader();
+                        body.classList.add( 'sticky-up' );
+                    }
                 }
-            }
 
-            this.lastScrollTop = scroll <= 0 ? 0 : scroll;
+                this.lastScrollTop = scroll <= 0 ? 0 : scroll;
+            }
 
             // if( scroll <= 50 ) {
             //     body.classList.remove( classHeaderSticky );
