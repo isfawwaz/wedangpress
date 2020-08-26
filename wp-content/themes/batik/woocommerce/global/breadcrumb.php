@@ -22,6 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! empty( $breadcrumb ) ) {
 
+	echo '<div class="container mx-auto">';
+
 	echo $wrap_before;
 
 	foreach ( $breadcrumb as $key => $crumb ) {
@@ -42,5 +44,7 @@ if ( ! empty( $breadcrumb ) ) {
 	}
 
 	echo $wrap_after;
+
+	echo '</div>';
 
 }
