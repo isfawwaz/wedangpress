@@ -173,29 +173,5 @@
 }
 
 .pagination {
-	@apply mt-8;
-
-	ul {
-		@apply list-none m-0 flex justify-center items-center;
-
-		li {
-			@apply mx-2;
-
-			a, span {
-				@apply py-2 px-4 border;
-			}
-
-			span {
-				@apply border-primary-text bg-primary-text text-white;
-			}
-
-			a {
-				@apply border-screen text-secondary-text;
-
-				&:hover {
-					@apply border-primary-text bg-primary-text text-white;
-				}
-			}
-		}
-	}
+	@include pagination();
 }

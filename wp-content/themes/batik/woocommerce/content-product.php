@@ -24,7 +24,7 @@ if ( empty( $product ) || false === wc_get_loop_product_visibility( $product->ge
 	return;
 }
 ?>
-<li <?php wc_product_class( '', $product ); ?>>
+<div <?php wc_product_class( '', $product ); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
@@ -64,4 +64,4 @@ if ( empty( $product ) || false === wc_get_loop_product_visibility( $product->ge
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
-</li>
+</div>

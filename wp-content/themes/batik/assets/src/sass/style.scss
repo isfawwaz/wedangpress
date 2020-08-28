@@ -43,6 +43,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 @import "components/variables-site/variables-site";
+@import "components/mixins/mixins-master";
 
 @tailwind base;
 @tailwind components;

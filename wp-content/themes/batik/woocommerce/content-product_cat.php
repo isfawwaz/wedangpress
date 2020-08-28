@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<li <?php wc_product_cat_class( '', $category ); ?>>
+<div <?php wc_product_cat_class( '', $category ); ?>>
 	<?php
 	/**
 	 * woocommerce_before_subcategory hook.
@@ -54,4 +54,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 */
 	do_action( 'woocommerce_after_subcategory', $category );
 	?>
-</li>
+</div>
