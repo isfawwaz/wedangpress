@@ -18,21 +18,14 @@ get_header();
 	<div id="primary" class="content-area">
 
 		<?php while( have_posts() ): the_post(); 
-			$jumbotron = get_post_meta( $post->ID, 'gragas_page_jumbotron', true );
+			$jumbotron = get_post_meta( get_the_ID(), 'gragas_page_jumbotron', true );
 			?>
 
 			<main id="main" class="site-main<?php echo empty($jumbotron) ? ' no-jumbotron' : '';?>">
 
 				<?php if( !empty($jumbotron) ):?>
 
-					<div class="gragas-jumbotron">
-						<div class="jumbotron-wrapper">
-							<h1 class="jumbotron-title"><?php echo strtoupper(single_post_title()); ?></h1>
-							<div class="breadcrumb-container">
-								<?php breadcrumbs(); ?>
-							</div>
-						</div>
-					</div>
+					<?php the_gragas_jumbotron( get_the_ID() );?>
 
 				<?php endif;?>
 
