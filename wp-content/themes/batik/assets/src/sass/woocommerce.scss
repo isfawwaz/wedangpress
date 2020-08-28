@@ -4,6 +4,9 @@ Theme Name: Gragas
 WooCommerce styles override
 */
 
+@import "components/variables-site/variables-site";
+@import "components/mixins/mixins-master";
+
 /**
  * WooCommerce color variables
  */
@@ -11,32 +14,44 @@ WooCommerce styles override
  $woocommerce__color-success: #0f834d;
  $woocommerce__color-info: #3D9CD2;
 
- /**
- * Shop tables
- */
-@import "woocommerce/shop/tables";
+/*--------------------------------------------------------------
+# Global
+	## Breadcrumb
+--------------------------------------------------------------*/
+@import "woocommerce/global/global";
 
-/**
- * Products
- */
-@import "woocommerce/shop/products";
+/*--------------------------------------------------------------
+# Products
+	## Archive Header
+--------------------------------------------------------------*/
+@import "woocommerce/products/products";
 
-/**
- * Single product
- */
-@import "woocommerce/shop/single-product";
+//  /**
+//  * Shop tables
+//  */
+// @import "woocommerce/shop/tables";
 
-/**
- * Checkout
- */
-@import "woocommerce/shop/checkout";
+// /**
+//  * Products
+//  */
+// @import "woocommerce/shop/products";
 
-/**
- * General WooCommerce components
- */
-@import "woocommerce/shop/components";
+// /**
+//  * Single product
+//  */
+// @import "woocommerce/shop/single-product";
 
-/**
- * WooCommerce widgets
- */
-@import "woocommerce/shop/widgets";
+// /**
+//  * Checkout
+//  */
+// @import "woocommerce/shop/checkout";
+
+// /**
+//  * General WooCommerce components
+//  */
+// @import "woocommerce/shop/components";
+
+// /**
+//  * WooCommerce widgets
+//  */
+// @import "woocommerce/shop/widgets";

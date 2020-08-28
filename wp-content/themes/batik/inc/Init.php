@@ -26,6 +26,7 @@ final class Init {
 			Setup\Setup::class,
 			Setup\Sidebar::class,
 			Setup\Taxonomies::class,
+			Setup\Woocommerce::class,
 			Elementor\Elementor::class,
 
 			/**

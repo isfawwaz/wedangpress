@@ -1,0 +1,35 @@
+.woocommerce {
+
+    .wd-breadcrumb {
+        @apply m-0 mt-8 mb-5 text-sm list-none flex items-center;
+    }
+
+    .wd-breadcrumb__item {
+        @apply flex items-center;
+
+        &::after {
+            content: "";
+            display: inline-table;
+            vertical-align: middle;
+            margin: 0 4px;
+            height: 20px;
+            width: 20px;
+            background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23d3dae6' fill-rule='evenodd' clip-rule='evenodd' d='M13.707 10.707l-5 5a.997.997 0 01-1.414 0 .999.999 0 010-1.414L11.586 10 7.293 5.707a.999.999 0 111.414-1.414l5 5a1 1 0 010 1.414z'/%3E%3C/svg%3E") no-repeat 50%;
+        }
+
+        &:last-child {
+            &::after {
+                @apply hidden;
+            }
+        }
+    }
+
+    .wd-breadcrumb__link {
+        @apply text-primary;
+    }
+
+    .wd-breadcrumb__span {
+        @apply text-secondary-text font-semibold;
+    }
+
+}

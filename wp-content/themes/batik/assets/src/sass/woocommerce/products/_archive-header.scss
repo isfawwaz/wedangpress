@@ -1,0 +1,7 @@
+.wd-products-header {
+    @apply text-primary-text border-b border-gray-300 pb-5 mb-8;
+
+    .wd-products-header__title {
+        @apply text-lg font-semibold;
+    }
+}
