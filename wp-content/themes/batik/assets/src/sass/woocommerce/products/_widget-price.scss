@@ -1,0 +1,41 @@
+.woocommerce {
+
+    &.widget {
+        a {
+            @apply text-sm;
+
+            & + span {
+                @apply text-sm;
+            }
+        }
+    }
+
+    .widget_price_filter {
+
+        .price_slider_wrapper {
+            .ui-slider {
+                .ui-slider-range,
+                .ui-slider-handle {
+                    @apply bg-primary-text;
+                }
+            }
+
+            .ui-widget-content {
+                @apply bg-tertiary-text;
+            }
+        }
+
+        .price_slider_amount {
+            @apply flex flex-col-reverse;
+
+            .price_label {
+                @apply text-right;
+            }
+
+            .button {
+                @include buttonDefault();
+            }
+        }
+    }
+
+}

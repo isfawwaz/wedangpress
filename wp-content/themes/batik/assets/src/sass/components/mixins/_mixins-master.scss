@@ -27,3 +27,17 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+
+/*--------------------------------------------------------------
+## Button
+--------------------------------------------------------------*/
+@mixin buttonDefault() {
+	@apply inline-block py-4 px-8 text-sm font-semibold bg-primary-text text-white cursor-pointer;
+	@apply border border-primary-text rounded-none;
+	@apply transition-all duration-500 ease-in-out;
+
+	&:hover {
+		@apply text-white bg-black border-black;
+	}
+}
