@@ -29,10 +29,11 @@
             @apply flex flex-col-reverse;
 
             .price_label {
-                @apply text-right;
+                @apply text-left;
             }
 
             .button {
+                @apply mt-5;
                 @include buttonDefault();
             }
         }

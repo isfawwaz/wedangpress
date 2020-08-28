@@ -41,3 +41,16 @@
 		@apply text-white bg-black border-black;
 	}
 }
+
+/*--------------------------------------------------------------
+## Input
+--------------------------------------------------------------*/
+@mixin inputDefault() {
+	@apply inline-block py-2 px-4 text-sm border bg-white text-primary-text cursor-pointer outline-none;
+	@apply border border-gray-300 rounded-none;
+	@apply transition-all duration-500 ease-in-out;
+
+	&:hover {
+		@apply border-gray-600;
+	}
+}
