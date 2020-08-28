@@ -20,6 +20,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<h1 class="product_title entry-title">
-	<?php echo esc_html( get_the_title() ); ?>
-</h1>
+<div class="product-title-wrapper">
+	<h1 class="product_title entry-title">
+		<?php echo esc_html( get_the_title() ); ?>
+	</h1>
+	<?php woocommerce_show_product_sale_flash();?>
+</div>

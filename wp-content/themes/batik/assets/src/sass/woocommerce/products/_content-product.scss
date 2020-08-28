@@ -24,10 +24,13 @@
                 @apply text-sm;
             }
         }
-
+        
         .button {
-            @apply mt-5;
             @include buttonDefault();
+        }
+
+        .add_to_cart_button {
+            @apply mt-5;
         }
     }
 
@@ -46,6 +49,177 @@
                         background: inherit;
                         color: inherit;
                     }
+                }
+            }
+        }
+    }
+
+    #content {
+
+        div.product {
+
+            div.images {
+                @apply float-none w-full;
+
+                .flex-control-thumbs {
+                    @apply mt-5 border-t border-screen;
+            
+                    li {
+                        width: 72px;
+                        margin: 8.5px
+                    }
+                }
+            }
+
+            div.summary {
+                @apply float-none w-full m-0;
+            }
+
+            .product-title-wrapper {
+                @apply flex items-center mb-5;
+
+                span.onsale {
+                    @apply relative inline-block top-auto right-auto ml-5;
+                }
+            }
+
+            .product_title {
+                @apply inline-block text-3xl text-primary-text;
+            }
+
+            form.cart {
+                @apply flex;
+
+                div.quantity {
+                    @apply float-none m-0;
+                }
+            }
+
+            .product_meta {
+                @apply flex flex-col;
+            }
+
+            .woocommerce-tabs {
+
+                ul.tabs {
+                    &::before {
+                        @apply border-screen;
+                    }
+
+                    li {
+                        @apply bg-transparent rounded-none transition-all duration-500 ease-in-out;
+                        border: none;
+                        border-bottom: 2px solid transparent;
+
+                        &::before,
+                        &::after {
+                            @apply hidden;
+                        }
+
+                        a {
+                            @apply text-tertiary-text;
+                        }
+
+                        &.active {
+                            @apply border-primary-text;
+
+                            a {
+                                @apply text-primary-text;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .related {
+                h2 {
+                    @apply mb-8 text-primary-text;
+                }
+            }
+        }
+    }
+
+    .quantity {
+
+        .qty {
+            @apply h-full mr-2;
+            @include inputDefault();
+            width: 100px;
+        }
+
+    }
+
+    .wd-product-meta {
+        @apply flex py-5 border-t border-screen;
+
+        & > dt {
+            display: inline-block;
+            text-transform: uppercase;
+            vertical-align: top;
+            width: 70px;
+            
+            & > p {
+                display: block;
+                position: relative;
+                font-weight: 700;
+                font-size: 0.857143rem;
+                line-height: 18px;
+                color: rgba(49, 53, 59, 0.32);
+                text-decoration: initial;
+                margin: 0px;
+            }
+        }
+
+        & > dd {
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 20px;
+            margin: 0px;
+
+            h3 {
+                @apply text-xl text-primary-text;
+
+                del {
+                    @apply text-base text-tertiary-text font-normal italic;
+                }
+
+                ins {
+                    @apply bg-transparent text-green-600;
+                }
+            }
+        }
+
+        dl {
+            margin: 0px 0px 12px;
+            white-space: nowrap;
+            display: flex;
+
+            & > div {
+                display: inline-block;
+                padding: 0px 16px;
+                border-right: 1px solid rgb(229, 231, 233);
+
+                &:first-of-type {
+                    @apply pl-0;
+                }
+
+                & > dt {
+                    p {
+                        display: block;
+                        position: relative;
+                        font-weight: 400;
+                        font-size: 0.857143rem;
+                        line-height: 18px;
+                        color: rgba(49, 53, 59, 0.68);
+                        text-decoration: initial;
+                        margin: 0px;
+                        text-transform: capitalize;
+                    }
+                }
+
+                & > dd {
+                    @apply m-0;
                 }
             }
         }

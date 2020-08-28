@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 ?>
-<div class="product_meta">
+<!-- <div class="product_meta">
 
 	<?php do_action( 'woocommerce_product_meta_start' ); ?>
 
@@ -37,4 +37,29 @@ global $product;
 
 	<?php do_action( 'woocommerce_product_meta_end' ); ?>
 
+</div> -->
+<div class="wd-product-meta">
+	<dt>
+		<p disabled="disabled">Info Produk</p>
+	</dt>
+	<dd>
+		<dl>
+			<div>
+				<dt>
+					<p><?php _e('Weight', 'woocommerce');?></p>
+				</dt>
+				<dd>
+					<?php echo $product->get_weight() . get_option('woocommerce_weight_unit');?>
+				</dd>
+			</div>
+			<div>
+				<dt>
+					<p><?php _e('Dimensions', 'woocommerce');?></p>
+				</dt>
+				<dd>
+					<?php echo $product->get_dimensions();?>
+				</dd>
+			</div>
+		</dl>
+	</dd>
 </div>

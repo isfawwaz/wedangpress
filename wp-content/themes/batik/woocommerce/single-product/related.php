@@ -21,6 +21,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
+	<hr>
+
 	<section class="related products">
 
 		<?php

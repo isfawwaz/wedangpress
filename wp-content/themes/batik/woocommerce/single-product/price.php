@@ -22,4 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<p class="<?php echo esc_attr( apply_filters( 'woocommerce_product_price_class', 'price' ) ); ?>"><?php echo $product->get_price_html(); ?></p>
+<div class="wd-product-meta">
+	<dt>
+		<p disabled="disabled">Harga</p>
+	</dt>
+	<dd>
+		<h3><?php echo $product->get_price_html(); ?></h3>
+	</dd>
+</div>
