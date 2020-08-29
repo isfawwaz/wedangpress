@@ -3,7 +3,8 @@
 	"type": "project",
 	"description": "Using Composer to manage complete WordPress Project",
 	"license": "MIT",
-    "version": "0.0.1",
+	"version": "0.1.0",
+	"minimum-stability": "alpha",
     "repositories": [
 		{
 			"type": "composer",
