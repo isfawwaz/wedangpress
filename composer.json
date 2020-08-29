@@ -1,5 +1,6 @@
 {
-    "name": "paperplane/dev-wordpress",
+	"name": "paperplane/dev-wordpress",
+	"type": "project",
 	"description": "Using Composer to manage complete WordPress Project",
 	"license": "MIT",
     "version": "0.0.1",
