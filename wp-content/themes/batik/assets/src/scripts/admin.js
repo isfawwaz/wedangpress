@@ -1,5 +1,7 @@
-import Vue from 'vue';
+// Sweet Alert 2
+import Swal from 'sweetalert2'
+window.Swal = Swal
 
-new Vue({
-    el: '#wpwrap'
-});
+// Custom Elements
+import './Admins/switch'
+import './Admins/gallery'
