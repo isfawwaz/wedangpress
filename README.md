@@ -64,7 +64,7 @@ wp core update
 Pastikan di pc atau laptop kamu sudah terinstall [wp-cli](https://developer.wordpress.org/cli/)
 
 ```bash
-wp core shuffle-salts
+wp config shuffle-salts
 ```
 
 ## Mengaktifkan Tema
