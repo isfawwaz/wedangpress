@@ -40,7 +40,7 @@ Pertama kali yang harus dilakukan adalah membuat file config, ada beberapa file 
 Kamu bisa melihat contoh config yang harus dibuat pada file `wp-config-example.php`, kemudian isikan value pada variable - variable yang ada
 
 ```bash
-cp wp-config-example.php <filename>
+cp -i wp-config-example.php <filename>
 ```
 
 ## Install Wordpress
