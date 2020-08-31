@@ -40,7 +40,7 @@ Pertama kali yang harus dilakukan adalah membuat file config, ada beberapa file 
 Kamu bisa melihat contoh config yang harus dibuat pada file `wp-config-example.php`, kemudian isikan value pada variable - variable yang ada
 
 ```bash
-cp wp-config-example.php <filename>
+cp -i wp-config-example.php <filename>
 ```
 
 ## Install Wordpress
@@ -64,7 +64,7 @@ wp core update
 Pastikan di pc atau laptop kamu sudah terinstall [wp-cli](https://developer.wordpress.org/cli/)
 
 ```bash
-wp core shuffle-salts
+wp config shuffle-salts
 ```
 
 ## Mengaktifkan Tema
