@@ -37,7 +37,7 @@ Pertama kali yang harus dilakukan adalah membuat file config, ada beberapa file 
 - `staging-config.php` untuk kebutuhan pada server stagging
 - `local-config.php` untuk kebutuhan local development
 
-Kamu bisa melihat contoh config yang harus dibuat pada file `wp-config-example.php`, kemudian isikan value pada variable - variable yang ada
+Kamu bisa melihat contoh config yang harus dibuat pada file `dynamic-config-sample.php`, kemudian isikan value pada variable - variable yang ada
 
 ```bash
 cp -i dynamic-config-sample.php <filename>
