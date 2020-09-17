@@ -1,5 +1,8 @@
 <?php
 // ** MySQL settings ** //
+/** The prefix of database */
+define( 'CONFIG_DB_PREFIX', 'wp_' );
+
 /** The name of the database for WordPress */
 define( 'CONFIG_DB_NAME', '' );
 
