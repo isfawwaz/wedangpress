@@ -11,14 +11,14 @@
     ],
     "require": {
 		"isfawwaz/lorasin": "0.1.1",
-		"wpackagist-plugin/broken-link-checker": "1.11.14",
-		"wpackagist-plugin/contact-form-7": "5.2.2",
-		"wpackagist-plugin/elementor": "3.0.8.1",
-		"wpackagist-plugin/google-analytics-dashboard-for-wp": "6.2.2",
-		"wpackagist-plugin/w3-total-cache": "0.14.4",
-		"wpackagist-plugin/wordpress-seo": "14.9",
-		"wpackagist-plugin/wp-smushit": "3.7.0",
-		"wpackagist-plugin/maintenance": "3.96",
+		"wpackagist-plugin/broken-link-checker": "1.11.15",
+		"wpackagist-plugin/contact-form-7": "5.3.2",
+		"wpackagist-plugin/elementor": "3.0.16",
+		"wpackagist-plugin/google-analytics-dashboard-for-wp": "6.4.0",
+		"wpackagist-plugin/w3-total-cache": "2.0.1",
+		"wpackagist-plugin/wordpress-seo": "15.5",
+		"wpackagist-plugin/wp-smushit": "3.8.2",
+		"wpackagist-plugin/maintenance": "3.97",
 		"wpackagist-plugin/limit-login-attempts": "2.0beta3"
 	},
 	"extra": {
