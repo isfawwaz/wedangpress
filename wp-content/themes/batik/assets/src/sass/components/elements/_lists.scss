@@ -1,24 +1,25 @@
 ul, ol {
-	@apply mt-0 mr-0 mb-6 ml-12;
+	margin: 0px 0px 24px 48px;
 }
 
 ul {
-	@apply list-disc;
+	list-style-type: disc;
 }
 
 ol {
-	@apply list-decimal;
+	list-style-type: decimal;
 }
 
 li > ul,
 li > ol {
-	@apply mb-0 ml-6;
+	margin-bottom: 0px;
+	margin-left: 24px;
 }
 
 dt {
-	@apply font-bold;
+	font-weight: bold;
 }
 
 dd {
-	@apply mt-0 mx-6 mb-6;
+	margin: 0px 24px 24px;
 }
