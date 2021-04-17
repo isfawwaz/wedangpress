@@ -1,11 +1,25 @@
 .alignleft {
-	@apply inline float-left mr-6;
+	display: inline;
+	float: left;
+	margin-right: 1.5rem;
 }
 
 .alignright {
-	@apply inline float-right ml-6;
+	display: inline;
+	float: right;
+	margin-left: 1.5rem;
 }
 
 .aligncenter {
-	@apply clear-both block mx-auto;
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft,
+.alignright,
+.aligncenter {
+	margin-top: 16px;
+	margin-bottom: 16px;
 }
