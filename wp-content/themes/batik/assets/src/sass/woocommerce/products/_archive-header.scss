@@ -1,7 +1,12 @@
 .wd-products-header {
-    @apply text-primary-text border-b border-gray-300 pb-5 mb-8;
+    color: $color__text-primary;
+    border-bottom: 1px solid #D1D5DB;
+    padding-bottom: 20px;
+    margin-bottom: 32px;
 
     .wd-products-header__title {
-        @apply text-lg font-semibold;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 600;
     }
 }

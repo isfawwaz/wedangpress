@@ -1,47 +1,58 @@
 .woocommerce {
 
     span.onsale {
-        @apply rounded-none py-2 px-4 left-auto text-xs min-h-0 min-w-0 leading-normal;
+        border-radius: 0px;
+        padding: 8px 16px;
+        left: auto;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        min-height: 0px;
+        min-width: 0px;
         top: 10px;
         right: 10px;
     }
 
     div.product {
-        @apply flex flex-col;
+        display: flex;
+        flex-direction: column;
 
         .woocommerce-loop-product__link {
-            @apply block;
+            display: block;
         }
 
         .woocommerce-loop-product__title {
-            @apply block mt-3 text-base font-normal text-primary-text;
+            display: block;
+            margin-top: 12px;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: $color__text-primary;
         }
 
         span.price {
-            @apply block mt-1 text-base font-semibold;
+            display: block;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 600;
 
             del {
-                @apply text-sm;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
             }
-        }
-        
-        .button {
-            @include buttonDefault();
         }
 
         .add_to_cart_button {
-            @apply mt-5;
+            margin-top: 20px;
         }
     }
 
     nav.woocommerce-pagination {
-        @include pagination();
 
         ul {
-            @apply border-none justify-end;
+            border: none;
+            justify-content: flex-end;
 
             li {
-                @apply border-none;
+                border: none;
 
                 span {
 
@@ -59,10 +70,12 @@
         div.product {
 
             div.images {
-                @apply float-none w-full;
+                float: none;
+                width: 100%;
 
                 .flex-control-thumbs {
-                    @apply mt-5 border-t border-screen;
+                    margin-top: 20px;
+                    border-bottom: 1px solid #f1f1f1;
             
                     li {
                         width: 72px;
@@ -72,59 +85,74 @@
             }
 
             div.summary {
-                @apply float-none w-full m-0;
+                float: none;
+                width: 100%;
+                margin: 0px;
             }
 
             .product-title-wrapper {
-                @apply flex items-center mb-5;
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
 
                 span.onsale {
-                    @apply relative inline-block top-auto right-auto ml-5;
+                    position: relative;
+                    display: inline-block;
+                    top: auto;
+                    right: auto;
+                    margin-left: 20px;
                 }
             }
 
             .product_title {
-                @apply inline-block text-3xl text-primary-text;
+                display: inline-block;
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+                color: $color__text-primary;
             }
 
             form.cart {
-                @apply flex;
+                display: flex;
 
                 div.quantity {
-                    @apply float-none m-0;
+                    float: none;
+                    margin: 0px;
                 }
             }
 
             .product_meta {
-                @apply flex flex-col;
+                display: flex;
+                flex-direction: column;
             }
 
             .woocommerce-tabs {
 
                 ul.tabs {
                     &::before {
-                        @apply border-screen;
+                        border-color: #f1f1f1;
                     }
 
                     li {
-                        @apply bg-transparent rounded-none transition-all duration-500 ease-in-out;
+                        background-color: transparent;
+                        border-radius: 0px;
+                        transition: all 0.5s ease-in-out;
                         border: none;
                         border-bottom: 2px solid transparent;
 
                         &::before,
                         &::after {
-                            @apply hidden;
+                            display: none;
                         }
 
                         a {
-                            @apply text-tertiary-text;
+                            color: $color__text-tertiary;
                         }
 
                         &.active {
-                            @apply border-primary-text;
+                            border-color: $color__text-primary;
 
                             a {
-                                @apply text-primary-text;
+                                color: $color__text-primary;
                             }
                         }
                     }
@@ -134,7 +162,8 @@
 
             .related {
                 h2 {
-                    @apply mb-8 text-primary-text;
+                    margin-bottom: 32px;
+                    color: $color__text-primary;
                 }
             }
         }
@@ -143,7 +172,8 @@
     .quantity {
 
         .qty {
-            @apply h-full mr-2;
+            height: 100%;
+            margin-right: 8px;
             @include inputDefault();
             width: 100px;
         }
@@ -151,7 +181,10 @@
     }
 
     .wd-product-meta {
-        @apply flex py-5 border-t border-screen;
+        display: flex;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #f1f1f1;
 
         & > dt {
             display: inline-block;
@@ -178,14 +211,21 @@
             margin: 0px;
 
             h3 {
-                @apply text-xl text-primary-text;
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+                color: $color__text-primary;
 
                 del {
-                    @apply text-base text-tertiary-text font-normal italic;
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    color: $color__text-tertiary;
+                    font-weight: normal;
+                    font-style: italic;
                 }
 
                 ins {
-                    @apply bg-transparent text-green-600;
+                    background-color: transparent;
+                    color: #059669;
                 }
             }
         }
@@ -201,7 +241,7 @@
                 border-right: 1px solid rgb(229, 231, 233);
 
                 &:first-of-type {
-                    @apply pl-0;
+                    padding-left: 0px;
                 }
 
                 & > dt {
@@ -219,7 +259,7 @@
                 }
 
                 & > dd {
-                    @apply m-0;
+                    margin: 0px;
                 }
             }
         }
