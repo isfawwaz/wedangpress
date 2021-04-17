@@ -1,0 +1,91 @@
+// Options
+$enable-shadows: true !default;
+
+// Color System
+$primary: $colorPrimary500 !default;
+$accent: $colorAccent500 !default;
+$light: white !default;
+
+$theme-colors: (
+    'accent': $colorAccent500,
+) !default;
+
+// Fonts
+$font-family-sans-serif: $font__text;
+
+$font-size-base: 0.875rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+
+$h1-font-size: $font__size-h1;
+$h2-font-size: $font__size-h2;
+$h3-font-size: $font__size-h3;
+$h4-font-size: $font__size-h4;
+$h5-font-size: $font__size-h5;
+$h6-font-size: $font__size-h6;
+$headings-font-weight: 700;
+
+// Headings
+$headings-font-family: $font__headings !default;
+$headings-font-weight: 700 !default;
+
+// LINK
+$link-color: $colorPrimary500 !default;
+$link-hover-decoration: none !default;
+
+// Buttons
+$btn-padding-y: 16px !default;
+$btn-padding-x: 32px !default;
+
+$btn-padding-y-sm: 8px !default;
+$btn-padding-x-sm: 28px !default;
+
+$btn-padding-y-lg: 16px !default;
+$btn-padding-x-lg: 48px !default;
+
+$btn-border-width: 1px !default;
+$btn-font-weight: bold !default;
+
+$btn-box-shadow: none !default;
+// $btn-focus-box-shadow:        inset 0px -4px 0px rgba(0, 0, 0, 0.06) !important !default;
+
+$btn-border-radius: 0px !default;
+$btn-border-radius-lg: 0px !default;
+$btn-border-radius-sm: 0px !default;
+
+// Inputs
+$input-bg: white !default;
+
+$input-font-size: 14px !default;
+
+$input-padding-y: 0.875rem !default;
+$input-padding-x: 1.5rem !default;
+
+$input-padding-y-sm: 0.675rem !default;
+$input-padding-x-sm: 1rem !default;
+
+$input-padding-y-lg: 1rem !default;
+$input-padding-x-lg: 2rem !default;
+
+$input-border-color: transparent !default;
+$input-border-width: 2px !default;
+$input-box-shadow: none !default;
+
+$input-border-radius: 0px !default;
+$input-border-radius-lg: 0px !default;
+$input-border-radius-sm: 0px !default;
+
+$input-focus-bg: $grayscaleOffWhite !default;
+$input-focus-border-color: $colorPrimary400 !default;
+$input-focus-box-shadow: none !default;
+
+$input-placeholder-color: $grayscalePlaceholder !default;
+
+// Badges
+$badge-padding-y: 7px !default;
+$badge-padding-x: 20px !default;
+$badge-border-radius: 8px !default;
+
+// Pagination
+$pagination-color: $grayscaleBody !default;
+$pagination-disabled-color: $grayscalePlaceholder !default;
