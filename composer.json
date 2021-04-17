@@ -12,13 +12,13 @@
     "require": {
 		"isfawwaz/lorasin": "0.1.1",
 		"wpackagist-plugin/broken-link-checker": "1.11.15",
-		"wpackagist-plugin/contact-form-7": "5.3.2",
-		"wpackagist-plugin/elementor": "3.0.16",
-		"wpackagist-plugin/google-analytics-dashboard-for-wp": "6.4.0",
-		"wpackagist-plugin/w3-total-cache": "2.0.1",
-		"wpackagist-plugin/wordpress-seo": "15.5",
-		"wpackagist-plugin/wp-smushit": "3.8.2",
-		"wpackagist-plugin/maintenance": "3.97",
+		"wpackagist-plugin/contact-form-7": "5.4",
+		"wpackagist-plugin/elementor": "3.1.4",
+		"wpackagist-plugin/google-analytics-dashboard-for-wp": "6.7.0",
+		"wpackagist-plugin/w3-total-cache": "2.1.2",
+		"wpackagist-plugin/wordpress-seo": "16.1.1",
+		"wpackagist-plugin/wp-smushit": "3.8.4",
+		"wpackagist-plugin/maintenance": "4.02",
 		"wpackagist-plugin/limit-login-attempts": "2.0beta3"
 	},
 	"extra": {
