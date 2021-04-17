@@ -1,57 +1,71 @@
 .widget {
-	@apply m-0 mb-6;
+	margin: 0px 0px 24px;
 
 	&:last-child {
-		@apply mb-0;
+		margin-bottom: 0px;
 	}
 
 	.widget-title {
-		@apply text-xl text-primary-text font-bold mb-5;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		color: $grayscaleBody;
+		font-weight: bold;
+		margin-bottom: 20px;
 	}
 
 	a {
 		&:hover {
-			@apply text-secondary-text;
+			color: $grayscaleLabel;
 		}
 	}
 
 	ul {
-		@apply list-none m-0;
+		list-style: none;
+		margin: 0;
 
 		li {
-			@apply mb-3;
+			margin-bottom: 12px;
 
 			&:last-child {
-				@apply mb-0;
+				margin-bottom: 0px;
 			}
 		}
 	}
 
 	/* Make sure select elements fit in widgets. */
 	select {
-		@apply max-w-full;
+		max-width: 100%;
 	}
 
 	// Search form
 	.search-form {
-		@apply relative;
+		position: relative;
 
 		.search-submit {
-			@apply hidden;
+			display: none;
 		}
 
 		.search-field {
-			@apply block w-full px-4 py-3 pr-10 border border-screen outline-none;
-			@apply bg-white text-sm text-primary-text;
-			@apply transition-all duration-500 ease-in-out;
+			display: block;
+			width: 100%;
+			padding: 12px 24px 12px 40px;
+			border: 1px solid #f1f1f1;
+			outline: none;
+			background-color: white;
+			font-size: 0.875rem;
+			line-height: 1.25rem;
+			color: $grayscaleBody;
+			transition: all 0.5s ease-in-out;
 
 			&:focus {
-				@apply border-primary-text;
+				border-color: $grayscaleBody;
 			}
 		}
 
 		label {
-			@apply block relative w-full;
+			display: blocl;
+			position: relative;
+			width: 100%;
 
 			&::after {
 				content: "\f002";
@@ -61,7 +75,10 @@
 				text-rendering: auto;
 				-webkit-font-smoothing: antialiased;
 				-moz-osx-font-smoothing: grayscale;
-				@apply text-screen absolute top-0 transform translate-y-full;
+				color: #f1f1f1;
+				position: absolute;
+				top: 0px;
+				transform: translateY(100%);
 				right: 15px;
 			}
 		}
@@ -70,6 +87,6 @@
 
 .widget-area {
 	.widget {
-		@apply mb-12;
+		margin-bottom: 48px;
 	}
 }

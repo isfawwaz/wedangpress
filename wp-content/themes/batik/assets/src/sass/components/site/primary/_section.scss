@@ -1,0 +1,39 @@
+.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section-main {
+    padding-bottom: 60px;
+}
+
+.section-hero {
+    margin-bottom: 140px;
+}
+
+.section-paragraph {
+    font-size: 16px;
+    font-weight: normal;
+    color: $grayscaleLabel;
+    margin-bottom: 50px;
+    line-height: 30px;
+
+    p {
+        font-size: 16px;
+        font-weight: normal;
+        color: $grayscaleLabel;
+        margin-bottom: 50px;
+        line-height: 30px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .section {
+        padding-top: 100px;
+        padding-bottom: 60px;
+    }
+
+    .section-title {
+        margin-top: 36px;
+    }
+}
