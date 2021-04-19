@@ -23,7 +23,7 @@ get_header();
 			<div class="row">
 				<div class="col-xs-12 col-md-8">
 					<?php
-					if (have_posts()) :
+					if (have_posts()) : the_post();
 						while (have_posts()) :
 							echo '<div class="article-grid">';
 							get_template_part('template-parts/content', get_post_type());
