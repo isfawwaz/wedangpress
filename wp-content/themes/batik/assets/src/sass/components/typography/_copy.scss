@@ -1,62 +1,60 @@
 p {
-	@apply mb-6 leading-8 text-primary-text;
+	margin-bottom: 24px;
+	line-height: 2rem;
+	color: $grayscaleBody;
 
 	&:last-child {
-		@apply mb-0;
+		margin-bottom: 0px;
 	}
 }
 
 dfn, cite, em, i {
-	@apply italic;
+	font-style: italic;
 }
 
 blockquote {
-	@apply my-0;
-	@apply mx-6;
+	margin: 0px 24px;
 
 	&:last-child {
-		@apply mb-0;
+		margin-bottom: 24px;
 	}
 }
 
 address {
-	@apply mx-0;
-	@apply mt-0;
-	@apply mb-6;
+	margin: 0px 0px 24px;
 
 	&:last-child {
-		@apply mb-0;
+		margin-bottom: 0px;
 	}
 }
 
 pre {
-	@apply bg-pre;
-	@apply font-mono;
-	@apply text-sm;
-	@apply leading-relaxed;
-	@apply mb-6;
-	@apply max-w-full;
-	@apply overflow-auto;
-	@apply p-6;
+	background-color: #eee;
+	font-family: $font__code;
+	font-size: 0.875rem;
+	line-height: 1.625;
+	margin-bottom: 24px;
+	max-width: 100%;
+	overflow: auto;
+	padding: 24px;
 }
 
 code, kbd, tt, var {
-	@apply font-code;
-	@apply text-sm;
+	font-family: $font__code;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 }
 
 abbr, acronym {
-	@apply border-b;
-	@apply border-abbr;
-	@apply border-dotted;
-	@apply cursor-help;
+	border-bottom: 1px dotted #666;
+	cursor: help;
 }
 
 mark, ins {
-	@apply bg-ins;
-	@apply no-underline;
+	background-color: #fff9c0;
+	text-decoration: none;
 }
 
 big {
-	@apply text-125p
+	font-size: 125%;
 }

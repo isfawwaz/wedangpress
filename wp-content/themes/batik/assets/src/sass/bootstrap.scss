@@ -1,0 +1,37 @@
+@import 'variables/variables';
+@import 'variables/bootstrap';
+@import '~bootstrap/scss/bootstrap';
+
+// @import "~bootstrap-vue/dist/bootstrap-vue.css";
+
+// @import "~vue-slick-carousel/dist/vue-slick-carousel.css";
+// @import "~vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+
+/* _text.scss:11 */
+.text-justify {
+    text-align: justify !important;
+}
+.text-nowrap {
+    white-space: nowrap !important;
+}
+.text-truncate {
+    @include text-truncate;
+}
+
+// Responsive alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .text#{$infix}-left {
+            text-align: left !important;
+        }
+        .text#{$infix}-right {
+            text-align: right !important;
+        }
+        .text#{$infix}-center {
+            text-align: center !important;
+        }
+    }
+}

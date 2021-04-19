@@ -40,10 +40,10 @@
 	}
 	?>
 
-	<wheader 
+	<h-header 
 		class="header header-default<?php echo $cls;?>" 
 		home="<?php echo site_url('/') ?>"
-		copyright="Wahah Hotel &amp; Entertainment">
+		copyright="Template Batik">
 		<template v-slot:logo>
 			<?php
 				$custom_logo_id = get_theme_mod('custom_logo');
@@ -54,6 +54,6 @@
 		<template v-slot:menu>
 			<?php gragas_menu_primary(); ?>
 		</template>
-	</wheader>
+	</h-header>
 
 	<div id="content" class="site-content">

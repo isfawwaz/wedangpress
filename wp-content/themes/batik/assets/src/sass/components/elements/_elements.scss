@@ -1,35 +1,36 @@
 body {
-	@apply bg-white; /* Fallback for when there is no custom background color defined. */
+	background-color: white; /* Fallback for when there is no custom background color defined. */
 }
 
 hr {
-	@apply bg-hr;
-	@apply border-0;
-	@apply h-1x;
-	@apply mb-6;
+	background-color: #CCC;
+	border: none;
+	height: 1px;
+	margin-bottom: 24px;
 }
 
 @import "lists";
 
 img {
-	@apply h-auto; /* Make sure images are scaled correctly. */
-	@apply max-w-full; /* Adhere to container width. */
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
 }
 
 figure {
 	/* Extra wide images within figure tags don't overflow the content area. */
-	@apply my-4;
-	@apply mx-0;
+	margin: 16px 0;
 }
 
 @import "tables";
 
 @import "jumbotron";
 
-@media (max-width: theme('screens.sm')) {
+@include media-breakpoint-down('sm') {
 
 	.container {
-		@apply mx-5 w-auto;
+		margin-left: 20px;
+		margin-right: 20px;
+		width: auto;
 	}
 
 }

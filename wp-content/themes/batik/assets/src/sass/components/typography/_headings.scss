@@ -1,27 +1,35 @@
 h1, h2, h3, h4, h5, h6 {
-	@apply clear-both font-heading font-bold;
+	clear: both;
+	font-family: $font__headings;
+	font-weight: bold;
 }
 
 h1, .h1 {
-	@apply text-4xl;
+	font-size: 2.25rem;
+	line-height: 2.5rem;
 }
 
 h2, .h2 {
-	@apply text-3xl;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
 }
 
 h3, .h3 {
-	@apply text-2xl;
+	font-size: 1.5rem;
+	line-height: 2rem;
 }
 
 h4, .h4 {
-	@apply text-xl;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 
 h5, .h5 {
-	@apply text-lg;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
 }
 
 h6, .h6 {
-	@apply text-base;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }

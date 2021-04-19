@@ -30,11 +30,6 @@ final class Init {
 			Elementor\Elementor::class,
 
 			/**
-			 * CUSTOM WAHAHA SITE
-			 */
-			Setup\SetupDatabase::class,
-
-			/**
 			 * METABOX
 			 */
 

@@ -1,11 +1,17 @@
 .woocommerce {
 
     .wd-breadcrumb {
-        @apply m-0 mt-8 mb-5 text-sm list-none flex items-center;
+        margin: 32px 0px 20px;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        list-style: none;
+        display: flex;
+        align-items: center;
     }
 
     .wd-breadcrumb__item {
-        @apply flex items-center;
+        display: flex;
+        align-items: center;
 
         &::after {
             content: "";
@@ -19,17 +25,18 @@
 
         &:last-child {
             &::after {
-                @apply hidden;
+                display: none;
             }
         }
     }
 
     .wd-breadcrumb__link {
-        @apply text-primary;
+        color: $grayscaleBody;
     }
 
     .wd-breadcrumb__span {
-        @apply text-secondary-text font-semibold;
+        color: $grayscaleLabel;
+        font-weight: 600;
     }
 
 }

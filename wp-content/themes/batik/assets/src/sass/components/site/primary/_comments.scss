@@ -1,7 +1,7 @@
 .comment-content a {
 	// word-wrap: break-word;
-	@apply break-words;
+	overflow-wrap: break-word;
 }
 .bypostauthor {
-	@apply block;
+	display: block;
 }

@@ -2,10 +2,12 @@
 
     &.widget {
         a {
-            @apply text-sm;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
 
             & + span {
-                @apply text-sm;
+                font-size: 0.875rem;
+                line-height: 1.25rem;
             }
         }
     }
@@ -16,25 +18,26 @@
             .ui-slider {
                 .ui-slider-range,
                 .ui-slider-handle {
-                    @apply bg-primary-text;
+                    background-color: $color__text-primary;
                 }
             }
 
             .ui-widget-content {
-                @apply bg-tertiary-text;
+                background-color: $color__text-tertiary;
             }
         }
 
         .price_slider_amount {
-            @apply flex flex-col-reverse;
+            display: flex;
+            flex-direction: column-reverse;
 
             .price_label {
-                @apply text-left;
+                text-align: left;
             }
 
             .button {
-                @apply mt-5;
-                @include buttonDefault();
+                margin-top: 20px;
+                // @include buttonDefault();
             }
         }
     }

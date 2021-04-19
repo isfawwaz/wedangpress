@@ -1,31 +1,45 @@
 .jumbotron {
-    @apply bg-screen text-center py-16 mb-25;
+    background-color: #f1f1f1;
+    text-align: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    margin-bottom: 100px;
 
     .jumbotron-title {
-        @apply text-5xl text-primary-text font-bold uppercase;
+        font-size: 3rem;
+        line-height: 1;
+        color: $grayscaleBody;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     ol, ul {
-        @apply list-none m-0 flex justify-center items-center;
+        list-style: none;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         li {
-            @apply text-secondary-text mx-2;
+            color: $grayscaleLabel;
+            margin-left: 8px;
+            margin-right: 8px;
 
             &:first-child {
-                @apply ml-0;
+                margin-left: 0px;
             }
 
             &:last-child {
-                @apply mr-0;
+                margin-right: 0px;
             }
 
             &::after {
                 content: "/";
-                @apply ml-3;
+                margin-left: 12px;
             }
 
             &.active {
-                @apply text-primary-text;
+                color: $grayscaleBody;
 
                 &::after {
                     display: none;
@@ -34,7 +48,7 @@
 
             a {
                 &:hover {
-                    @apply text-primary-text;
+                    color: $grayscaleBody;
                 }
             }
 

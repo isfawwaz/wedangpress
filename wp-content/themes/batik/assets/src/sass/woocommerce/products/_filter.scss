@@ -1,19 +1,22 @@
 .wd-filter-container {
-    @apply flex items-center mb-8;
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
 
     .woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering,
     .woocommerce .woocommerce-result-count, .woocommerce-page .woocommerce-result-count {
-        @apply float-none;
+        float: none;
     }
 
     .woocommerce-result-count {
-        @apply text-sm text-tertiary-text;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $color__text-tertiary;
     }
 
     .woocommerce-ordering {
         select {
-            @include inputDefault();
-            @apply mr-5;
+            margin-right: 20px;
         }
     }
 }
