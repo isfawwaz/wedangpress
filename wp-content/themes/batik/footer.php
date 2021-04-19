@@ -13,7 +13,7 @@
 
 	</div><!-- #content -->
 
-	<wfooter 
+	<h-footer 
 		id="site-footer"
 		class="site-footer"
 		home="<?php echo site_url('/'); ?>"
@@ -58,7 +58,7 @@
 			</p>
 		</template>
 
-	</wfooter>
+	</h-footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

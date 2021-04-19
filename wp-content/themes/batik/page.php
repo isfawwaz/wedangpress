@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all pages
  *
@@ -15,27 +16,27 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
+<div id="primary" class="content-area">
 
-		<?php while( have_posts() ): the_post(); 
-			$jumbotron = get_post_meta( get_the_ID(), 'gragas_page_jumbotron', true );
-			?>
+	<?php while (have_posts()) : the_post();
+		$jumbotron = get_post_meta(get_the_ID(), 'gragas_page_jumbotron', true);
+	?>
 
-			<main id="main" class="site-main<?php echo empty($jumbotron) ? ' no-jumbotron' : '';?>">
+		<main id="main" class="site-main<?php echo empty($jumbotron) ? ' no-jumbotron' : ''; ?>">
 
-				<?php if( !empty($jumbotron) ):?>
+			<?php if (!empty($jumbotron)) : ?>
 
-					<?php the_gragas_jumbotron( get_the_ID() );?>
+				<?php the_gragas_jumbotron(get_the_ID()); ?>
 
-				<?php endif;?>
+			<?php endif; ?>
 
-				<?php the_content();?>
+			<?php the_content(); ?>
 
-			</main>
+		</main>
 
-		<?php endwhile;?>
+	<?php endwhile; ?>
 
-	</div><!-- #primary -->
+</div><!-- #primary -->
 
 <?php
 get_footer();
