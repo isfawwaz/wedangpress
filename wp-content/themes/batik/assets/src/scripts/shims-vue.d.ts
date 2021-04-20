@@ -8,3 +8,10 @@ declare module '*.svg' {
     const content: VueConstructor<Vue>;
     export default content;
 }
+
+// Example for 3rd party declaration
+declare module 'vue-image-brightness' {
+    export default class VueImageBrightness {
+        static install(Vue: any, options?: any[]): void;
+    }
+}
