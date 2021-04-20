@@ -3,13 +3,13 @@ const mix = require( 'laravel-mix' );
 mix.setPublicPath('./assets/dist/');
 
 // Compile Assets
-mix.ts( 'assets/src/scripts/main.js', 'assets/dist/js' )
+mix.ts( 'assets/src/scripts/main.ts', 'assets/dist/js' )
     .vue({
         version: 2
     });
 
 mix.js( 'assets/src/scripts/admin.js', 'assets/dist/js' )
-    .sass( 'assets/src/sass/bootstrap.scs', 'assets/dist/css' )
+    .sass( 'assets/src/sass/bootstrap.scss', 'assets/dist/css' )
     .sass( 'assets/src/sass/style.scss', 'assets/dist/css' )
 	.sass( 'assets/src/sass/woocommerce.scss', 'assets/dist/css' )
     .sass( 'assets/src/sass/admin.scss', 'assets/dist/css' );
