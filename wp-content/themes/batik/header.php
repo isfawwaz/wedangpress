@@ -29,7 +29,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="wahaha-site" class="site">
+<div id="app" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gragas' ); ?></a>
 
 	<?php
