@@ -1,6 +1,7 @@
 const mix = require( 'laravel-mix' );
 
 mix.setPublicPath('./assets/dist/');
+mix.setResourceRoot('./wp-content/themes/batik/assets/dist/');
 
 // Compile Assets
 mix.ts( 'assets/src/scripts/main.ts', 'assets/dist/js' )
