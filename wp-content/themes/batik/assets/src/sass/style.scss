@@ -45,9 +45,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 @import "components/variables-site/variables-site";
 @import "components/mixins/mixins-master";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'components/variables-site/bootstrap';
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 
 @import "~animate.css";
 
