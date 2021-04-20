@@ -174,7 +174,7 @@
         .qty {
             height: 100%;
             margin-right: 8px;
-            @include inputDefault();
+            // @include inputDefault();
             width: 100px;
         }
 
